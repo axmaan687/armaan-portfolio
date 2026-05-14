@@ -1,14 +1,7 @@
-import { defineConfig } from "@lovable.dev/vite-tanstack-config";
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
 
 export default defineConfig({
-  base: "/armaan-portfolio/", 
-  tanstackStart: {
-    // This tells the framework to generate static files instead of a server entry
-    output: "static", 
-  },
-  vite: {
-    build: {
-      outDir: "dist",
-    }
-  }
-});
+  base: '/armaan-portfolio/',  // ← must match your repo name exactly
+  plugins: [react()],
+})
