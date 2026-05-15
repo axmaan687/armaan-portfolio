@@ -4,13 +4,12 @@ import { routeTree } from "./routeTree.gen";
 
 export const getRouter = () => {
   const queryClient = new QueryClient();
-
   const router = createRouter({
     routeTree,
+    basepath: '/armaan-portfolio/',
     context: { queryClient },
     scrollRestoration: true,
     defaultPreloadStaleTime: 0,
   });
-
   return router;
 };
